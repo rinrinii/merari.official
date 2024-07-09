@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>merari.official</title>
+    <link rel="icon" type="icon" href="img/tpng logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="product-page.css">
+
+    <!--Import Google Fonts, Source Sans 3 and Source Serif 4-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+    <!--Import Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!------------------------------------------Navigation Bar Start------------------------------------------>
+
+    <!-------------------------------- Source code by: GARCIA, MARIEN -------------------------------->
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-white">
+        <div class="container-fluid position-relative m-3 mx-5">
+            <!-- Navbar Toggler Button for Mobile View -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="index.html">
+                <img src="img/tpng logo.png" class="logo" width="120" height="80" alt="Brand Logo">
+            </a>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse m-3" id="navbarNavAltMarkup">
+                <div class="navbar-nav me-auto">
+                    <!-- Navigation Links -->
+                    <a class="nav-link active" aria-current="page" href="shop.html">SHOP</a>
+                    <a class="nav-link" href="about-us.html">ABOUT US</a>
+                    <a class="nav-link" href="faqs.html">FAQs</a>
+                </div>
+            </div>
+
+            <!-- Cart Link (Visible on all screen sizes) -->
+            <a class="nav-link position-absolute end-0 me-3" href="checkoutpage.html">MY CART</a>
+        </div>
+    </nav>
+
+    <!------------------------------------------Navigation Bar End------------------------------------------>
+
+    <!------------------------------------------Product Section Start------------------------------------------>
+
+    <section class="container-fluid mx-auto">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col-md-7">
+                <img src="img/productimg_11.png" class="product-display img-fluid p-4 mx-lg-5" alt="Product Image">
+            </div>
+
+            <div class="col-md-5">
+                <div class="product-box mx-lg-5 pe-lg-2 mx-sm-4 py-5">
+                    <h3 class="product-name">Howl's Moving Castle<br>Sophie (Blue ver.)</h3>
+                    <h4 id="displayed-price" class="product-price">₱160 - ₱170</h4>
+
+                    <div class="input-box mt-5">
+                        <label for="variation" class="form-label">VARIATION</label>
+                        <select id="variation" class="form-select" onchange="updatePrice()">
+                            <option hidden>Select Option</option>
+                            <option value="160" data-price="160">13cm - 14cm</option>
+                            <option value="160" data-price="160">15cm - 16cm</option>
+                            <option value="160" data-price="160">17cm - 18cm</option>
+                            <option value="170" data-price="170">Custom Size (DM/NOTE)</option>
+                        </select>
+
+                        <label for="quantity" class="form-label mt-4">QUANTITY</label>
+                        <input type="number" class="form-control quantity-field" id="quantity" name="quantity" min="1" max="5">
+                    </div>
+
+                    <div class="d-grid mt-5">
+                        <button type="submit" class="btn btn-secondary">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="solid" style="border-top: 3px solid #bbb;"> <!------------Page Divider------------>
+
+        <div class="container-fluid">
+            <div class = "product-desc mx-5">
+                <h2 class="product-name">Product Description</h2>
+
+                <div class="row row-cols-md-2">
+                    <div class="col-md-6 text-box p-3">
+                        Welcome to Merari!
+                        <br>
+                        Howl's Moving Castle Inspired Chained bracelets
+                        <br> <br>
+                        When choosing Custom Size variation, make sure to message us your preferred bracelet size in DMS or ORDER NOTES!
+                        <br>
+
+                        <h5 class="highlight-text mt-3 mb-2">
+                            Product Information
+                        </h5>
+                        <ul class="info-list">
+                            <li>The bracelets are handmade.</li>
+                            <li>When we don't have the right amount of materials there might be some adjustments to the bracelet, 
+                                but we will be informing you first before making it.</li>
+                            <li>Our bracelets are made to order, which means once the order is placed, then we will make the bracelet.</li>
+                            <li>Please measure your wrist size before ordering.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 text-box p-3">
+                        <h5 class="highlight-text">
+                            Bracelet care guide
+                        </h5>
+                        
+                        <h5 class="highlight-text mt-3 mb-2">
+                            DON'TS
+                        </h5>
+                        <ul class="info-list">
+                            <li>Do NOT leave in water for long periods of time, can result in faded colors.</li>
+                            <li>Do NOT wear while doing a water activity/swimming.</li>
+                        </ul>
+
+                        Before ordering, please read the product information, thank you!
+                        <br><br>
+                        Feel free to message us here at merari.official, about custom sizes of the product.
+                        <br>
+                        If you have any concerns or questions, feel free to message us ♡
+                        <br>
+                        Thank you and God Bless!
+                        <br><br>
+                        Follow us on Insta: 
+                        <a class="text-body" href="https://www.instagram.com/merari_official">@merari_official</a><br>
+                        Follow us on Tiktok: 
+                        <a class="text-body" href="https://www.tiktok.com/@.merari_official">@.merari_official</a><br>
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!------------------------------------------Product Section End------------------------------------------>
+
+    <!------------------------------------------Footer Start------------------------------------------>
+
+    <footer class="text-center" style="background-color: #D8DBE2;">
+        <div class="link-box p-4" style="background-color: #C4922C;">
+            <div class="link-icons me-5" style="text-align: right;">
+                <a href="https://shopee.ph/merari.official" class="text-white me-4" style="text-decoration: none;">
+                    <i class="bi bi-bag-fill"></i>
+                </a>
+                
+                <a href="https://x.com/MerariOfficial" class="text-white me-4" style="text-decoration: none;">
+                    <i class="bi bi-twitter-x"></i> 
+                </a>
+        
+                <a href="https://www.tiktok.com/@.merari_official" class="text-white me-4" style="text-decoration: none;">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+                  
+                <a href="https://www.instagram.com/merari_official" class="text-white me-4" style="text-decoration: none;">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="row row-cols-sm-2 row-cols-md-3 g-4 p-4 mt-2">
+                <div class="col-md-5">
+                    <img src="img/test_image1.png" class="img-fluid" style="max-height: 200px;">
+                </div>
+
+                <div class="col">
+                    <h3 class="footer-heading" style="font-size: 2rem;">Links</h3> 
+                    <div class="link-box mt-4 mx-auto text-align-center">
+                        <!--Replace Link with individual product page-->
+                        <ul class="list-unstyled"> 
+                            <li class="mb-3 ">
+                                <a class="footer-link" href="index.html" style="text-decoration: none; color: #161925">Home</a>
+                            </li>
+                            <li class="mb-3">
+                                <a class="footer-link" href="about-us.html" style="text-decoration: none; color: #161925">About Us</a>
+                            </li>
+                            <li class="mb-3">
+                                <a class="footer-link" href="faqs.html" style="text-decoration: none; color: #161925">FAQs</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mx-auto mb-4">
+                    <h3 class="footer-heading" style="font-size: 2rem;">Contact Us</h3>
+                    <div class="contact-box mt-4 mx-auto text-align-center"> 
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <p><i class="bi bi-buildings pe-2"></i>San Pedro, Laguna</p>
+                            </li>
+                            <li class="mb-2">
+                                <p><i class="bi bi-envelope pe-2"></i>merariofficial@gmail.com</p>
+                            </li>
+                            <li class="mb-2">
+                                <p><i class="bi bi-telephone pe-2 mb-0"></i>+ 63 **** 4160</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2023 Copyright:
+                <a class="text-body" href="index.html">merari_official.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!------------------------------------------Footer End------------------------------------------>
+
+</body>
+</html>
+
+<script>
+    function updatePrice() {
+        // Get the selected option element
+        var selectElement = document.getElementById("variation");
+        var selectedOption = selectElement.options[selectElement.selectedIndex];
+        
+        // Get the price from the data-price attribute of the selected option
+        var selectedPrice = selectedOption.getAttribute("data-price");
+        
+        // Update the displayed price element
+        var displayedPriceElement = document.getElementById("displayed-price");
+        displayedPriceElement.textContent = '₱' + selectedPrice;
+    }
+
+</script>
+
+<!-------------------------------- Source code by: GARCIA, MARIEN -------------------------------->
